@@ -1,0 +1,192 @@
+@import "../node_modules/normalize-scss/sass/normalize/import-now";
+* {
+    outline: none;
+}
+
+$font-size: 1.1em;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.3;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#calculator {
+    border-radius: 12px;
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.3); // margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#settings {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+}
+
+#themePicker {
+    display: none;
+    position: absolute;
+    top: 9px;
+    left: 35px;
+    z-index: 1;
+    border-radius: 4px;
+    padding: 10px;
+    ul {
+        list-style-type: none;
+        padding: 15px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+    }
+    ul a.sizeSwitch.active,
+    ul a.styleSwitch.active {
+        color: #000;
+        position: relative;
+    } // .styleTitle {
+    //     grid-column: 1 / 4;
+    // }
+    ul a.sizeSwitch.active:before,
+    ul a.styleSwitch.active:before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: tomato;
+        margin-left: 2px;
+    }
+    a {
+        // text-indent: -9999px;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+    }
+    a[data-style='dark'] {
+        background: #34373E;
+    }
+    a[data-style='light'] {
+        background: #fff;
+    }
+    a[data-style='green'] {
+        background: green;
+    }
+    a[data-style='pink'] {
+        background: pink;
+    }
+    a[data-style='brown'] {
+        background: #88725D;
+    }
+    a[data-style='regular'] {
+        border: 1px solid #000;
+    }
+    a[data-style='large'] {
+        border: 1px solid #000;
+        height: 30px;
+        width: 30px;
+    }
+    a.sizeSwitch.active[data-style='large']:before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: tomato;
+        margin-left: 6px;
+        margin-top: 2px;
+    }
+}
+
+.display {
+    font-size: $font-size + 0.4em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+}
+
+.keys {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    button {
+        border: 0;
+        background-color: #fff;
+        padding: 1em 1.25em;
+        position: relative;
+        text-align: center;
+    }
+}
+
+.keys>*:active::before,
+.keys>.is-pressed::before {
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+    content: "";
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.keys button.operator {
+    background-color: #eee;
+}
+
+.equal {
+    background-image: linear-gradient(to bottom, #F99C2A, #ff7033);
+}
+
+.zero {
+    grid-column: 1 / span 2;
+}
+
+.bar {
+    color: white;
+    padding: 5px
+}
+
+#history {
+    max-height: 150px;
+    overflow: auto;
+}
+
+.fas {
+    margin: 5px 10px 5px 3px;
+}
+
+.fa-toggle {
+    transition: all .5s linear;
+}
+
+.rotate {
+    transform: rotate(-180deg);
+}
+
+@import 'themes/light.scss';
+@import 'themes/dark.scss';
+@import 'themes/green.scss';
+@import 'themes/pink.scss';
+@import 'themes/brown.scss';
+@import 'themes/regular.scss';
+@import 'themes/large.scss';

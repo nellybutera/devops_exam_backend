@@ -1,0 +1,104 @@
+$primary-color: rgb(54, 46, 46);
+$secondary-color: rgb(163, 139, 116);
+$font-color: darken($primary-color, 20%);
+
+
+body {
+    &.brown {
+        background-color: lighten($secondary-color, 25%);
+
+        #themePicker {
+            background: lighten($secondary-color, 25%);
+            box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.3);
+
+            .styleTitle {
+                font-size: 1.1em;
+                font-weight: bold; 
+                color: $font-color;
+            }
+            .stylePick {
+                color:$font-color;
+
+                &.active {
+                    color: darken($secondary-color, 10%);
+                }
+            }
+
+        }
+
+        &.regular {
+            .calculator {
+                width: 273px;
+            }
+
+            button {
+                width: 56px;
+                line-height: 56px;
+                padding: 0;
+
+                &.equal {
+                    border-radius: 90px;
+                }
+            }
+        }
+
+        &.large {
+            .calculator {
+                max-width: 480px;
+            }
+            
+            .keys {
+                button {
+                    padding: 0; 
+                    font-size: 2em;
+                    width: 6.5rem;
+                    line-height: 6.5rem;
+
+                    &.equal {
+                        border-radius: 90px;
+                    }
+                }
+            }
+        }
+
+        .calculator {
+            background-color: $primary-color;
+        }
+        .display  {
+            background-color: transparent;
+            color: white;
+            font-size: 2.5em;
+        }
+        .keys {
+            grid-gap: 8px;
+            padding: 0 8px;
+            .operator {
+                background-color: lighten($secondary-color, 5%);
+                color: white;
+            }
+
+            button {
+                background-color: $secondary-color;
+                border-radius: 50%;
+                &.zero {
+                    grid-column: 1;
+                }
+                &.equal {
+                    background-color: darken($secondary-color, 10%);
+                    background-image: none;
+                    color: white;
+                    grid-column: 3/span 2;
+                    width: auto;
+                }
+            }
+        }
+
+        .history {
+            color: white;
+        }
+
+        .bar {
+            background-color: transparent;
+        }
+    }
+}

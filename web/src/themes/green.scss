@@ -1,0 +1,38 @@
+$first: rgb(31, 87, 36);
+$second: #8bcc7e;
+$base-font-color: $first;
+body.green {
+    background-color: lighten($second, 20%);
+    color: $base-font-color;
+    #calculator {
+        background-color: $second;
+    }
+    #themePicker {
+        background-color: $second;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+    }
+
+    .display {
+        color: $base-font-color;
+        background-color: lighten($first, 8%);
+        color: white;
+    }
+    .keys {
+        background-color: $first;
+    }
+    .keys button {
+        background-color: $second;
+        color: $base-font-color;
+        &.equal {
+            background-image: none;
+            background-color: lighten($first, 8%);
+            color: white;
+        }
+    }
+    .bar {
+        background: $first;
+        border-bottom: 1px solid lighten( $first, 10%);
+        color: $second;
+    }
+
+}

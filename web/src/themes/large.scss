@@ -1,0 +1,12 @@
+body.large {
+    .calculator {
+        width: 90%;
+        font-size: $font-size + 0.1em; 
+    }
+    .keys {
+        button {
+            padding: 1.5em 1.25em;
+            font-size: $font-size + 0.1em;
+        }
+    }
+}

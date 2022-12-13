@@ -1,0 +1,29 @@
+$first: #34373E;
+$second: #66686e;
+$base-font-color: #fff;
+body.dark {
+    background-color: lighten($second, 20%);
+    color: $base-font-color;
+    #calculator {
+        background-color: $second;
+    }
+    #themePicker {
+        background-color: $second;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+    }
+    .display {
+        color: $base-font-color;
+        background-color: $first;
+    }
+    .keys {
+        background-color: $first;
+    }
+    .keys button {
+        background-color: $second;
+        color: $base-font-color;
+    }
+    .bar {
+        background: $first;
+        border-bottom: 1px solid lighten( $first, 10%);
+    }
+}
