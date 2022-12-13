@@ -1,0 +1,23 @@
+{
+  "name": "devops_exam_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nellybutera/devops_exam_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nellybutera/devops_exam_backend/issues"
+  },
+  "homepage": "https://github.com/nellybutera/devops_exam_backend#readme",
+  "dependencies": {
+    "jest": "^29.3.1",
+    "save-dev": "^0.0.1-security"
+  }
+}
