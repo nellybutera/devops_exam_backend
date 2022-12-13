@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="fa-6x">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </div>
+    </div>
+    <div id="calculator" class="calculator">
+        <div id="settings"><a href="#" class="toggle"><i class="fas fa-cog fa-toggle"></i></a></div>
+        <div id="themePicker">
+            <ul>
+                <!-- <li class="styleTitle">style:</li> -->
+                <li><a href="#" class="stylePick styleSwitch" data-style="dark"></a></li>
+                <li><a href="#" class="stylePick styleSwitch" data-style="light"></a></li>
+                <li><a href="#" class="stylePick styleSwitch" data-style="green"></a></li>
+                <li><a href="#" class="stylePick styleSwitch" data-style="pink"></a></li>
+                <li><a href="#" class="stylePick styleSwitch" data-style="brown"></a></li>
+                <!-- <li class="styleTitle">size:</li> -->
+                <li><a href="#" class="stylePick sizeSwitch" data-style="regular"></a></li>
+                <li><a href="#" class="stylePick sizeSwitch" data-style="large"></a></li>
+            </ul>
+        </div>
+        <div class="display">0</div>
+        
+        <!-- Calculator Keys -->
+        <div class="keys">
+            <button data-key="8" data-action="clear">AC</button>
+            <button class="operator" data-key="0" data-action="plusminus">+/-</button>
+            <button class="operator" data-key="53" data-action="percent">%</button>
+            <button class="operator" data-key="111" data-action="divide">÷</button>
+            <button data-key="103">7</button>
+            <button data-key="104">8</button>
+            <button data-key="105">9</button>
+            <button class="operator" data-key="106" data-action="multiply">&times;</button>
+            <button data-key="100">4</button>
+            <button data-key="101">5</button>
+            <button data-key="102">6</button>
+            <button class="operator" data-key="109" data-action="subtract">-</button>
+            <button data-key="97">1</button>
+            <button data-key="98">2</button>
+            <button data-key="99">3</button>
+            <button class="operator" data-key="107" data-action="add">+</button>
+            <button data-key="96" class="zero">0</button>
+            <button data-key="190" data-action="decimal">.</button>
+            <button data-key="13" class="equal" data-action="calculate">=</button>
+        </div>
+        <div class="bar">
+            <a href="#" class="toggle"><i class="fas fa-chevron-circle-down fa-toggle"></i>adv</a>
+        </div>
+        
+        <!-- Operator keys -->
+        <div class="keys" style="display: none;">
+            <button class="operator" data-action="pow">x<sup>2</sup></button>
+            <button class="operator" data-action="pow3">x<sup>3</sup></button>
+            <button class="operator" data-action="powy">x<sup>y</sup></button>
+            <button class="operator" data-action="sin">sin</button>
+            <button class="operator" data-action="sqrt">&#8730;</button>
+            <button class="operator" data-action="cbrt">&#8731;</button>
+            <button class="operator" data-action="nthrt">&#8730;y</button>
+            <button class="operator" data-action="cos">cos</button>
+        </div>
+        <div class="bar">
+            <a href="#" class="toggle"><i class="fas fa-chevron-circle-down fa-toggle"></i>his</a>
+        </div>
+        <div style="display: none;">
+            <ul id="history" class="history"></ul>
+        </div>
+    </div>
+
+    <script src="/js/manifest.js"></script>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
